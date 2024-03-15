@@ -46,7 +46,7 @@
                         <div class="header-column justify-content-end">
                             <div class="header-row">
                                 <div class="header-col">
-                                    <a href="./se-connecter.html" class="btn nav-link mr-2 px-1"><img width="25"
+                                    <a onclick="userNav()" href="#" class="btn nav-link mr-2 px-1"><img width="25"
                                             src="./fronts/images/icons/ic-user.png"
                                             alt=""></a>
                                 </div>
@@ -75,26 +75,25 @@
         </div>
         <div class="row mt-4">
             <div class="col text-center">
-                <a href="#" class="text-color-primary text-decoration-underline">Tableau de bord</a>
+                <a href="./Tableau-de-bord.html" class="text-color-black text-decoration-underline font-weight-bold">Tableau de bord</a>
             </div>
             <div class="col text-center">
-                <a href="#" class="text-color-black text-decoration-underline">Commandes</a>
+                <a href="./Commandes.html" class="text-color-primary text-decoration-underline font-weight-bold">Commandes</a>
             </div>
             <div class="col text-center">
-                <a href="#" class="text-color-primary text-decoration-underline">Adresses</a>
+                <a href="./Adresse.html" class="text-color-black text-decoration-underline font-weight-bold">Adresses</a>
             </div>
             <div class="col text-center">
-                <a href="#" class="text-color-primary text-decoration-underline">Détails du compte</a>
+                <a href="./Details-du-compte.html" class="text-color-black text-decoration-underline font-weight-bold">Détails du compte</a>
             </div>
             <div class="col text-center">
-                <a href="#" class="text-color-primary text-decoration-underline">Se déconnecter</a>
+                <a href="index.html" class="text-color-black text-decoration-underline font-weight-bold deconnecter">Se déconnecter</a>
             </div>
         </div>
         <div class="row mt-5">
             <div class="col-md-12">
-                <p class="text-2 text-color-black px-2">
-                    <img src="./fronts/images/icons/ic-i.png" width="25" class="mr-1" />
-                    Aucune commande n’a encore été passée.
+                <p class="text-2 text-color-black px-2" id="command-cnt">
+                    
                 </p>
             </div>
         </div>
@@ -119,17 +118,14 @@
                                 <td style="vertical-align: top"><img class="mr-2"
                                         src="./fronts/images/icons/location-icon.png" alt="" width="18" height="18" />
                                 </td>
-                                <td>Adresse : </td>
+                                <td>Adresse : 11 rue Isaline, 73100 Aix-les-Bains, France</td>
                             </tr>
                         </table>
                     </li>
-                    <li class="mb-1"><img class="mr-2" src="./fronts/images/icons/phone-icon.png" alt="" width="18"
-                            height="18" /> <a itemprop="phoneNumber" title="téléphone"
-                            href="tel:">Tel :
-                            </a></li>
+                     
                     <li class="mb-1"><img class="mr-2" src="./fronts/images/icons/envlope-icon.png" alt="" width="18"
                             height="18" /> <a itemprop="email" title="E-mail"
-                            href="mailto:">E-mail :
+                            href="mailto:">E-mail : contact@eivienature.fr
                             </a></li>
                     <li class="mb-1"><a href="./Formulaire-de-contact.html">Formulaire de contact</a></li>
                     <li class="mb-1"><a href="./Formulaire-de-devis.html">Formulaire demande de devis</a></li>
@@ -139,12 +135,12 @@
                 <h4 class="font-weight-bold ls-0 text-4">SUIVEZ NOUS SUR :</h4>
                 <ul class="social-icons">
                     <li class="mr-2">
-                        <a target="_blank" rel="nofollow" href="#1"
+                        <a target="_blank" rel="nofollow" href="https://www.instagram.com/eivienature/"
                             title="Instagram"><img src="./fronts/images/icons/instagram-icon.png" alt="" width="30"
                                 height="30" /></a>
                     </li>
                     <li class="mr-2">
-                        <a target="_blank" rel="nofollow" href=""
+                        <a target="_blank" rel="nofollow" href="https://www.facebook.com/eivienature/"
                             title="Facebook"><img src="./fronts/images/icons/facebook-icon.png" alt="" width="30"
                                 height="30" /></a>
                     </li>
@@ -267,6 +263,19 @@
 <script src="./fronts/js/func.js"></script>
 <script src="./fronts/js/script.js"></script>
 
+<script>
+if(localStorage.getItem('command') != null) {
+    $("#command-cnt").html('<div style="border: 1px solid black;padding: 11px;border-radius: 10px;"><p class="text-3 text-color-black"><b class="text-5 text-color-secondary">Commande N°</b> : '+localStorage.getItem('command')+'</p><p class="text-color-black"><b class="text-color-secondary">Status</b> : En cours de validation</p></div>');
+    
+} else {
+    $("#command-cnt").html('<img src="./fronts/images/icons/ic-i.png" width="25" class="mr-1" />Aucune commande n’a encore été passée.');
+}
+</script>
+<script>
+    $(".deconnecter").click(function() {
+        localStorage.removeItem('se_connecter');
+    });
+</script>
 </body>
 
 </html>

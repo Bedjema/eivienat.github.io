@@ -46,7 +46,7 @@
                         <div class="header-column justify-content-end">
                             <div class="header-row">
                                 <div class="header-col">
-                                    <a href="./se-connecter.html" class="btn nav-link mr-2 px-1"><img width="25"
+                                    <a onclick="userNav()" href="#" class="btn nav-link mr-2 px-1"><img width="25"
                                             src="./fronts/images/icons/ic-user.png"
                                             alt=""></a>
                                 </div>
@@ -73,7 +73,7 @@
                 <div class="card border-0 border-radius-0 bg-color-light px-3 py-2">
                     <div class="card-body py-2 p-0">
                         <h4 class="text-justify text-color-black font-weight-bold line-height-3 text-5 mb-3">Panier</h4>
-                        <div class="row justify-content-center align-items-center h-100">
+                        <div class="row justify-content-center align-items-center h-100" id="prod-1">
                             <div class="col-lg-3 text-center">
                                 <img class="img-fluid home-prod" src="fronts/images/product/p-1.png" />
                             </div>
@@ -84,10 +84,10 @@
                                 <p class="text-color-black text-left text-1 mb-1">Purée à la pomme, goyave et SPIRULINE.
                                 </p>
                                 <p class="text-color-black text-left text-1 mb-1">Pack x 18</p>
-                                <p class="text-color-black font-weight-bold text-right text-3-4 mb-0">46,80 €</p>
+                                <p class="text-color-black font-weight-bold text-right text-3-4 mb-0 price">46.80 €</p>
                                 <div class="row">
                                     <div class="col-3">
-                                        <select name="quantite" id="quantite" class="w-100 p-2 border-radius-0">
+                                        <select name="quantite" id="quantite_1" disabled class="w-100 p-2 border-radius-0">
                                             <option value="1">1</option>
                                             <option value="2">2</option>
                                             <option value="3">3</option>
@@ -96,29 +96,29 @@
                                         </select>
                                     </div>
                                     <div class="col-3">
-                                        <a href="#" class="text-color-black text-1">Supprimer</a>
+                                        <span style="cursor:pointer;" id="sup-1" class="text-color-black text-1">Supprimer</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="row justify-content-center align-items-center h-100">
+                        <div class="row justify-content-center align-items-center h-100" id="prod-2">
                             <div class="col-lg-3 text-center">
                                 <img class="img-fluid home-prod" src="fronts/images/product/p-2.png" />
                             </div>
                             <div class="col-lg-9 text-center">
                                 <h2 class="text-justify font-weight-bold line-height-3 text-4-5 mb-2"
-                                    style="color:#d60093 !important;">
+                                    style="color:#005945 !important;">
                                     CAMU CAMU</h2>
                                 <p class="text-color-black text-left text-1 mb-1">Purée à la banane, abricot et CAMU
                                     CAMU.
                                 </p>
                                 <p class="text-color-black text-left text-1 mb-1">Pack x 3</p>
-                                <p class="text-color-black font-weight-bold text-right text-3-4 mb-0">8,55 €</p>
-                                <p class="text-color-black text-right text-1 mb-1">Pack x 18 : 46,80 €</p>
+                                <p class="text-color-black font-weight-bold text-right text-3-4 mb-0 price">8.55 €</p>
+                                <p class="text-color-black text-right text-1 mb-1">Pack x 18 : 46.80 €</p>
                                 <div class="row">
                                     <div class="col-3">
-                                        <select name="quantite" id="quantite" class="w-100 p-2 border-radius-0">
+                                        <select name="quantite" id="quantite_2" disabled class="w-100 p-2 border-radius-0">
                                             <option value="1">1</option>
                                             <option value="2">2</option>
                                             <option value="3">3</option>
@@ -127,13 +127,13 @@
                                         </select>
                                     </div>
                                     <div class="col-3">
-                                        <a href="#" class="text-color-black text-1">Supprimer</a>
+                                        <span style="cursor:pointer;" id="sup-2" class="text-color-black text-1">Supprimer</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="row justify-content-center align-items-center h-100">
+                        <div class="row justify-content-center align-items-center h-100" id="prod-3">
                             <div class="col-lg-3 text-center">
                                 <img class="img-fluid home-prod" src="fronts/images/product/p-3.png" />
                             </div>
@@ -145,11 +145,11 @@
                                     fruit du BAOBAB.
                                 </p>
                                 <p class="text-color-black text-left text-1 mb-1">Pack x 3</p>
-                                <p class="text-color-black font-weight-bold text-right text-3-4 mb-0">17,10 €</p>
-                                <p class="text-color-black text-right text-1 mb-1">Pack x 18 : 46,80 €</p>
+                                <p class="text-color-black font-weight-bold text-right text-3-4 mb-0 price">17.10 €</p>
+                                <p class="text-color-black text-right text-1 mb-1">Pack x 18 : 46.80 €</p>
                                 <div class="row">
                                     <div class="col-3">
-                                        <select name="quantite" id="quantite" class="w-100 p-2 border-radius-0">
+                                        <select name="quantite" id="quantite_3" disabled class="w-100 p-2 border-radius-0">
                                             <option value="1">1</option>
                                             <option value="2">2</option>
                                             <option value="3">3</option>
@@ -158,7 +158,7 @@
                                         </select>
                                     </div>
                                     <div class="col-3">
-                                        <a href="#" class="text-color-black text-1">Supprimer</a>
+                                        <span style="cursor:pointer;" id="sup-3" class="text-color-black text-1">Supprimer</span>
                                     </div>
                                 </div>
                             </div>
@@ -230,7 +230,8 @@
                                         <p class="text-color-black text-left text-1 mb-1">Sous-total</p>
                                     </div>
                                     <div class="col-md-6">
-                                        <p class="text-color-black text-right text-1 mb-1">72,45 €</p>
+                                        <p class="text-color-black text-right text-1 mb-1 price-total-lbl">72.45 €</p>
+                                        <p class="d-none price-total">72.45</p>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -269,8 +270,7 @@
                                         <p class="text-color-black text-left text-1 mb-1">TVA incluse</p>
                                     </div>
                                     <div class="col-md-6">
-                                        <p class="text-color-black text-right text-3-4 mb-0 font-weight-bold">72,45 €
-                                        </p>
+                                        <p class="text-color-black text-right text-3-4 mb-0 font-weight-bold price-total-lbl">72.45 €</p>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -326,17 +326,14 @@
                                 <td style="vertical-align: top"><img class="mr-2"
                                         src="./fronts/images/icons/location-icon.png" alt="" width="18" height="18" />
                                 </td>
-                                <td>Adresse : </td>
+                                <td>Adresse : 11 rue Isaline, 73100 Aix-les-Bains, France</td>
                             </tr>
                         </table>
                     </li>
-                    <li class="mb-1"><img class="mr-2" src="./fronts/images/icons/phone-icon.png" alt="" width="18"
-                            height="18" /> <a itemprop="phoneNumber" title="téléphone"
-                            href="tel:">Tel :
-                            </a></li>
+                     
                     <li class="mb-1"><img class="mr-2" src="./fronts/images/icons/envlope-icon.png" alt="" width="18"
                             height="18" /> <a itemprop="email" title="E-mail"
-                            href="mailto:">E-mail :
+                            href="mailto:">E-mail : contact@eivienature.fr
                             </a></li>
                     <li class="mb-1"><a href="./Formulaire-de-contact.html">Formulaire de contact</a></li>
                     <li class="mb-1"><a href="./Formulaire-de-devis.html">Formulaire demande de devis</a></li>
@@ -346,12 +343,12 @@
                 <h4 class="font-weight-bold ls-0 text-4">SUIVEZ NOUS SUR :</h4>
                 <ul class="social-icons">
                     <li class="mr-2">
-                        <a target="_blank" rel="nofollow" href="#1"
+                        <a target="_blank" rel="nofollow" href="https://www.instagram.com/eivienature/"
                             title="Instagram"><img src="./fronts/images/icons/instagram-icon.png" alt="" width="30"
                                 height="30" /></a>
                     </li>
                     <li class="mr-2">
-                        <a target="_blank" rel="nofollow" href=""
+                        <a target="_blank" rel="nofollow" href="https://www.facebook.com/eivienature/"
                             title="Facebook"><img src="./fronts/images/icons/facebook-icon.png" alt="" width="30"
                                 height="30" /></a>
                     </li>
@@ -432,14 +429,14 @@
                     <h2 class="text-justify text-color-primary font-weight-bold line-height-3 text-5-6 mb-2">
                         CAMU CAMU</h2>
                     <p class="text-color-black text-left text-1 mb-1">À partir de <span
-                            class="text-color-black font-weight-bold text-right text-5 mb-0">2,50 €</span>
+                            class="text-color-black font-weight-bold text-right text-5 mb-0">2.50 €</span>
                     </p>
                     <p class="text-color-black text-left text-1 mb-1">Purée à la banane, abricot et CAMU CAMU.</p>
 
                     <div class="ml-3">
-                        <p class="text-color-secondary text-left text-1 mb-0">Pack x3 : 2,85€ la gourde de 100g</p>
-                        <p class="text-color-secondary text-left text-1 mb-0">Pack x18 : 2,60€ la gourde de 100g</p>
-                        <p class="text-color-secondary text-left text-1 mb-0">Pack x30 : 2,50€ la gourde de 100g</p>
+                        <p class="text-color-secondary text-left text-1 mb-0">Pack x3 : 2.85€ la gourde de 100g</p>
+                        <p class="text-color-secondary text-left text-1 mb-0">Pack x18 : 2.60€ la gourde de 100g</p>
+                        <p class="text-color-secondary text-left text-1 mb-0">Pack x30 : 2.50€ la gourde de 100g</p>
                     </div>
                 </div>
             </div>
@@ -457,9 +454,9 @@
                         BAOBAB.</p>
 
                     <div class="ml-3">
-                        <p class="text-color-secondary text-left text-1 mb-0">Pack x3 : 2,85€ la gourde de 100g</p>
-                        <p class="text-color-secondary text-left text-1 mb-0">Pack x18 : 2,60€ la gourde de 100g</p>
-                        <p class="text-color-secondary text-left text-1 mb-0">Pack x30 : 2,50€ la gourde de 100g</p>
+                        <p class="text-color-secondary text-left text-1 mb-0">Pack x3 : 2.85€ la gourde de 100g</p>
+                        <p class="text-color-secondary text-left text-1 mb-0">Pack x18 : 2.60€ la gourde de 100g</p>
+                        <p class="text-color-secondary text-left text-1 mb-0">Pack x30 : 2.50€ la gourde de 100g</p>
                     </div>
                 </div>
             </div>
@@ -473,6 +470,54 @@
 <script src="./fronts/js/plugin.js"></script>
 <script src="./fronts/js/func.js"></script>
 <script src="./fronts/js/script.js"></script>
+
+<script>
+localStorage.setItem('p_1', 'V');
+localStorage.setItem('p_2', 'V');
+localStorage.setItem('p_3', 'V');
+$("#sup-1").click(function() {
+    $("#prod-1").remove();
+    localStorage.setItem('p_1', 'N');
+    var pricetotal = $(".price-total").text();
+    var amount =  pricetotal - 46.80;
+    $(".price-total-lbl").text(parseFloat(amount).toFixed(2) + ' €');
+    $(".price-total").text(parseFloat(amount).toFixed(2));
+    localStorage.setItem('price_total', parseFloat(amount).toFixed(2) + " €");
+});
+$("#sup-2").click(function() {
+    $("#prod-2").remove();
+    localStorage.setItem('p_2', 'N');
+    var pricetotal = $(".price-total").text();
+    var amount =  pricetotal - 8.55;
+    $(".price-total-lbl").text(parseFloat(amount).toFixed(2) + ' €');
+    $(".price-total").text(parseFloat(amount).toFixed(2));
+    localStorage.setItem('price_total', parseFloat(amount).toFixed(2) + " €");
+});
+$("#sup-3").click(function() {
+    $("#prod-3").remove();
+    localStorage.setItem('p_3', 'N');
+    var pricetotal = $(".price-total").text();
+    var amount =  pricetotal - 17.10;
+    $(".price-total-lbl").text(parseFloat(amount).toFixed(2) + ' €');
+    $(".price-total").text(parseFloat(amount).toFixed(2));
+    localStorage.setItem('price_total', parseFloat(amount).toFixed(2) + " €");
+});
+
+// $('#quantite_1').on('change', function() {
+//   var pricetotal = $(".price-total").text().replace('€', '');
+//   if(this.value == 1) {
+//     var amount = 0;
+//   } else {
+//     var amount =  46.80 * this.value;
+//   }
+//   var total = amount + pricetotal;
+//   $(".price-total").text(parseFloat(total).toFixed(2));
+// });
+
+// $('select').on('change', function() {
+//   alert( this.value );
+// });
+</script>
 
 </body>
 

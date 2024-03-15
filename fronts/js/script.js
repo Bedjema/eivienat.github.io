@@ -510,6 +510,18 @@ function openNav() {
      }
 
 }
+
+function userNav() {
+
+    if (localStorage.getItem('se_connecter') == "T") {
+        window.location.href = "./Tableau-de-bord.html";
+     }
+     else {
+        window.location.href = "./se-connecter.html";
+     }
+
+}
+
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
     $("#cart-bg").remove();
