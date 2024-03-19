@@ -526,3 +526,13 @@ function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
     $("#cart-bg").remove();
 }
+
+function showside() {
+if ($(window).width() > 960) {
+    document.getElementById("mySidenav").style.width = "560px";
+    $("body").append('<div class="mfp-bg mfp-ready" id="cart-bg"></div>');
+ }
+ else {
+    window.location.href = "./Panier.html";
+ }
+}

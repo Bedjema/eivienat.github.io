@@ -371,6 +371,11 @@
         localStorage.removeItem('se_connecter');
     });
 
+    if(localStorage.getItem('username') != null) {
+        $("#NomEntreprise").val(localStorage.getItem('username'));
+    } else {
+        $("#NomEntreprise").val("user");
+    }
 </script>
 </body>
 
